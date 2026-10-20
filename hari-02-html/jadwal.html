@@ -1,20 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jadwal Pelatihan</title>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-    <th></th>
-    <tr> 
-        <td rowspan='2'>Selasa</td> 
-        <td>Teori HTML5</td> 
-        <td>08.00-10.15</td> 
-    </tr> 
-    <tr> 
-        <td>Praktik form</td> 
-        <td>10.30-12.00</td> 
-    </tr> 
+
+    <tablej>
+        <caption>Jadwal Pelatihan</caption>
+
+        <thead>
+            <tr>
+                <th scope="col">Hari</th>
+                <th scope="col">Materi</th>
+                <th scope="col">Jam</th>
+                <th scope="col">Instruktur</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Senin</td>
+                <td>Instalasi Tools</td>
+                <td>08.00-17.00</td>
+                <td>Pak Bayu</td>
+            </tr>
+            <tr>
+                <td>Selasa</td>
+                <td>HTML5</td>
+                <td>08.00-17.00</td>
+                <td>Pak Bayu</td>
+            </tr>
+            <tr>
+                <td>Rabu</td>
+                <td>CSS3</td>
+                <td>08.00-17.00</td>
+                <td>Pak Bayu</td>
+            </tr>
+            <tr>
+                <td>Kamis</td>
+                <td>JavaScript</td>
+                <td>08.00-17.00</td>
+                <td>Pak Bayu</td>
+            </tr>
+            <tr>
+                <td>Jumat</td>
+                <td>PHP</td>
+                <td>08.00-17.00</td>
+                <td>Pak Bayu</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="3">Total Jam</td>
+                <td>50 JP</td>
+            </tr>
+        </tfoot>
+    </table>
+
 </body>
 </html>
