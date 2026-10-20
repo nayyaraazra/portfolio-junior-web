@@ -16,7 +16,11 @@
                 <li><a href="#hero">Beranda</a></li>
                 <li><a href="tentang.html">Tentang</a></li>
                 <li><a href="produk"> Produk Unggulan</a></li>
-                <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#jadwal">Jadwal Produksi</a></li>
+                <li><a href="#kontak">Pemesanan</a></li>
+
+
             </ul>
         </nav>
     </header>
@@ -25,7 +29,7 @@
         <section id="hero">
             <h2>Roti Tradisional Berkualitas</h2>
             <p>Kami menghadirkan roti tradisional dengan cita rasa autentik dan bahan-bahan berkualitas.</p>
-            <img src="image.png" alt="Ilustrasi Roti Tradisional" width="300" loading="lazy">
+            <img src="img/image.png" alt="Ilustrasi Roti Tradisional" width="300" loading="lazy">
         </section>
 
         <section id="tentang">
@@ -55,9 +59,115 @@
             </ul>
         </section>
 
+                <section id="galeri">
+            <h2>Galeri Dapur Kami</h2>
+            <p>Melihat lebih dekat proses pembuatan dan hasil karya kami:</p>
+            <div>
+                <img src="img/roti-1.jpg" alt="Proses menguleni adonan roti" width="200" loading="lazy">
+                <img src="img/roti-2.png" alt="Roti manis baru keluar dari oven" width="200" loading="lazy">
+                <img src="img/roti-3.png" alt="Penyusunan kue basah di atas tampah" width="200" loading="lazy">
+                <img src="img/roti-4.png" alt="Roti tawar gandum yang sudah diiris" width="200" loading="lazy">
+                <img src="img/roti-5.png" alt="Kemasan kotak untuk pemesanan hajatan" width="200" loading="lazy">
+                <img src="img/roti-6.png" alt="Pelanggan sedang memilih roti di etalase" width="200" loading="lazy">
+            </div>
+        </section>
+
+        <hr>
+
+          <section id="jadwal">
+            <h2>Jadwal Produksi Harian</h2>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <caption>Waktu Roti Keluar dari Oven (Fresh from the Oven)</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Kategori Produk</th>
+                        <th scope="col">Waktu Selesai Panggang</th>
+                        <th scope="col">Ketersediaan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Kue Basah Tradisional</td>
+                        <td>05.00 WIB</td>
+                        <td>Tersedia pagi hari</td>
+                    </tr>
+                    <tr>
+                        <td>Roti Tawar & Gandum</td>
+                        <td>07.00 WIB</td>
+                        <td>Sepanjang hari</td>
+                    </tr>
+                    <tr>
+                        <td>Roti Manis Aneka Rasa</td>
+                        <td>10.00 WIB & 15.00 WIB</td>
+                        <td>Sangat cepat habis</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Pemesanan jumlah besar / grosir</td>
+                        <td>H-2 sebelum acara</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <hr>
+
         <section id="kontak">
-            <h2>Kontak Kami</h2>
-            <p>Email: <a href="mailto:example@mail.com">example@mail.com</a></p>
+            <h2>Formulir Pemesanan Khusus</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Data Pemesanan Roti/Kue</legend>
+                    <p>
+                        <label for="nama">Nama Pemesan:</label><br>
+                        <input type="text" id="nama" name="nama" required minlength="3">
+                    </p>
+
+                    <p>
+                        <label for="email">Email Aktif:</label><br>
+                        <input type="email" id="email" name="email" required placeholder="email@contoh.com">
+                    </p>
+                    
+                    <p>
+                        <label for="hp">No. WhatsApp/HP:</label><br>
+                        <input type="tel" id="hp" name="hp" required pattern="08[0-9]{8,11}" title="Awali dengan 08, panjang 10-13 digit">
+                    </p>
+
+                    <p>
+                        <label for="kategori">Kategori Pesanan:</label><br>
+                        <select id="kategori" name="kategori" required>
+                            <option value="">-- Pilih Jenis --</option>
+                            <option value="hajatan">Kotak Roti Hajatan</option>
+                            <option value="kue-tampah">Kue Basah Tampah</option>
+                            <option value="eceran">Pemesanan Eceran Rutin</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="detail">Detail Pesanan & Tanggal Pengambilan:</label><br>
+                        <textarea id="detail" name="detail" rows="4" required placeholder="Tuliskan jumlah barang dan tanggal acara Anda"></textarea>
+                    </p>
+
+                </fieldset>
+                
+                <p>
+                    <label><input type="checkbox" name="setuju" required> Saya setuju pesanan tidak dapat dibatalkan H-1</label>
+                </p>
+
+                <button type="submit">Kirim Pesanan</button>
+                <button type="reset">Kosongkan Form</button>
+            </form>
+        </section>
     </main>
+        <footer>
+        <p>Kunjungi toko kami atau ikuti media sosial kami:</p>
+        <ul>
+            <li><a href="https://instagram.com/contoh" target="_blank" rel="noopener noreferrer">Instagram (@rotirasanusantara)</a></li>
+            <li><a href="mailto:pesanan@rotirasanusantara.com">pesanan@rotirasanusantara.com</a></li>
+        </ul>
+        <p><small>&copy; 2026 Toko Roti Rasa Nusantara. Hak Cipta Dilindungi.</small></p>
+    </footer>
 </body>
 </html>
+
+
