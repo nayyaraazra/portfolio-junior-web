@@ -6,7 +6,6 @@ let tinggi_badan =170;
 let status_aktif = true;
 
 console.log(`Halo ${nama}, umur saya ${umur} tahun, tinggi badan saya ${tinggi_badan} cm, status aktif: ${status_aktif}`);
-
 //cek tipe data
 console.log(typeof ('5' + 3));
 console.log(typeof('5' * 3));
