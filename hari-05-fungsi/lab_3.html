@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 3 - DOM dan Event</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    button, input {
+      padding: 8px;
+      margin: 4px 0;
+    }
+
+    .selesai {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lab 3 - DOM dan Event</h1>
+
+  <h2>Counter</h2>
+  <h2 id="angka">0</h2>
+  <button id="tambah">Tambah</button>
+  <button id="kurang">Kurang</button>
+  <button id="reset">Reset</button>
+
+  <hr>
+
+  <h2>Daftar Tugas</h2>
+
+  <form id="form-tugas">
+    <label for="teks-tugas">Tugas baru</label><br>
+    <input
+      id="teks-tugas"
+      type="text"
+      maxlength="80"
+      placeholder="Masukkan tugas (maksimal 80 karakter)"
+      required
+    >
+    <button type="submit">Tambah</button>
+    <p id="jumlah-karakter">0/80 karakter</p>
+  </form>
+
+  <p id="sisa-tugas">Tugas tersisa: 0</p>
+  <ul id="daftar-tugas"></ul>
+
+  <script>
+    let hitung = 0;
+
+    const angka = document.getElementById('angka');
+    const perbarui = () => {
+      angka.textContent = hitung;
+    };
+
+    document.getElementById('tambah').addEventListener('click', () => {
+      hitung++;
+      perbarui();
+    });
+
+    document.getElementById('kurang').addEventListener('click', () => {
+      hitung--;
+      perbarui();
+    });
+
+    document.getElementById('reset').addEventListener('click', () => {
+      hitung = 0;
+      perbarui();
+    });
+
+    const form = document.getElementById('form-tugas');
+    const inputTugas = document.getElementById('teks-tugas');
+    const daftar = document.getElementById('daftar-tugas');
+    const sisaTugas = document.getElementById('sisa-tugas');
+    const jumlahKarakter = document.getElementById('jumlah-karakter');
+
+    function perbaruiSisaTugas() {
+      const tugas = daftar.querySelectorAll('li');
+      const belumSelesai = [...tugas].filter(
+        (item) => !item.querySelector('span').classList.contains('selesai')
+      ).length;
+
+      sisaTugas.textContent = `Tugas tersisa: ${belumSelesai}`;
+    }
+
+    inputTugas.addEventListener('input', () => {
+      jumlahKarakter.textContent = `${inputTugas.value.length}/80 karakter`;
+    });
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const teks = inputTugas.value.trim();
+      if (teks === '') return;
+
+      const item = document.createElement('li');
+      const teksItem = document.createElement('span');
+      teksItem.textContent = teks + ' ';
+
+      teksItem.addEventListener('click', () => {
+        teksItem.classList.toggle('selesai');
+        perbaruiSisaTugas();
+      });
+
+      const hapus = document.createElement('button');
+      hapus.type = 'button';
+      hapus.textContent = 'Hapus';
+
+      hapus.addEventListener('click', () => {
+        item.remove();
+        perbaruiSisaTugas();
+      });
+
+      item.append(teksItem);
+      item.append(hapus);
+      daftar.append(item);
+
+      form.reset();
+      jumlahKarakter.textContent = '0/80 karakter';
+      perbaruiSisaTugas();
+    });
+  </script>
+</body>
+</html>
+
