@@ -1,0 +1,18 @@
+=== Uji Fitur A: Undo/Redo (dua Stack) ===
+  LULUS  awal: tidak ada riwayat, undo/redo tidak error
+  LULUS  ketik "a","ab","abc" lalu undo x3 kembali ke kosong
+  LULUS  redo mengembalikan teks urutan terbalik
+  LULUS  mengetik baru setelah undo menghapus riwayat redo
+  LULUS  teks yang sama tidak dicatat dua kali
+  LULUS  riwayat dibatasi 50 langkah (tantangan)
+
+=== Uji Fitur B: Antrean Loket (Queue) ===
+  LULUS  format nomor A001, A010, A123
+  LULUS  panggil pada antrean kosong -> null (tanpa error)
+  LULUS  urutan FIFO: yang ambil nomor lebih dulu dipanggil lebih dulu
+  LULUS  riwayat menyimpan maksimal 5 nomor terakhir (terbaru di depan)
+  LULUS  tombol Reset mengosongkan semuanya, nomor mulai lagi dari A001
+  LULUS  nomor di-reset otomatis saat hari berganti
+  LULUS  ekspor/impor: data hari yang sama dipulihkan, hari lain diabaikan
+
+SEMUA UJI PBL LULUS (13 uji)

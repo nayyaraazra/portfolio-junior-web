@@ -1,0 +1,22 @@
+=== Lab 2: Map dan Set ===
+
+1. Frekuensi kata dari "saya belajar web saya suka web":
+   saya: 2
+   web: 2
+   belajar: 1
+   suka: 1
+
+2. Sebelum: [ 'a@x.com', 'b@x.com', 'a@x.com', 'c@x.com', 'b@x.com' ] (5)
+   Sesudah: [ 'a@x.com', 'b@x.com', 'c@x.com' ] (3)
+
+3. Kelas A : [ 'Sari', 'Budi', 'Citra', 'Dimas' ]
+   Kelas B : [ 'Citra', 'Eka', 'Sari', 'Fitri' ]
+   Irisan  : [ 'Citra', 'Sari' ]
+   Irisan dengan daftar kosong: []
+
+4. adaDuplikat
+   []            -> false (harus false)
+   [7]           -> false (harus false)
+   [1,2,3]       -> false (harus false)
+   [1,2,3,2]     -> true (harus true)
+   ['a','a']     -> true (harus true)

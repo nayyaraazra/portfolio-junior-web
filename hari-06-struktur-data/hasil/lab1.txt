@@ -1,0 +1,22 @@
+=== Lab 1: Array dan Objek ===
+
+1. Peserta aktif: Sari, Budi, Dimas, Eka, Fitri, Hana, Indra, Joko
+
+2. Urut nama: Budi, Citra, Dimas, Eka, Fitri, Gilang, Hana, Indra, Joko, Sari
+   Array asli tidak berubah: true
+
+3. Cari id 5   : { id: 5, nama: 'Eka', kelas: 'Data', nilai: 88, aktif: true }
+   Cari id 99  : null (tidak ditemukan ditangani -> null)
+
+4. Jumlah per kelas: { Web: 4, Data: 3, Mobile: 3 }
+
+5. Tambah / ubah / hapus
+   Setelah tambah  : jumlah = 11
+   Ubah id 2 -> true { id: 2, nama: 'Budi', kelas: 'Web', nilai: 78, aktif: false }
+   Ubah id 99 -> false
+   Hapus id 3 -> true | hapus id 99 -> false
+   Hasil akhir     : 1:Sari, 2:Budi, 4:Dimas, 5:Eka, 6:Fitri, 7:Gilang, 8:Hana, 9:Indra, 10:Joko, 11:Kirana
+
+6. Objek berindeks id (pencarian O(1))
+   byId[5]  : { id: 5, nama: 'Eka', kelas: 'Data', nilai: 88, aktif: true }
+   byId[99] : undefined (undefined bila tidak ada)

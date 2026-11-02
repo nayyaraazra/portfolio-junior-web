@@ -1,0 +1,31 @@
+=== Lab 3: Stack ===
+push A,B,C  -> size 3 | isi (dasar->puncak): [ 'A', 'B', 'C' ]
+peek        -> C (tidak menghapus, size tetap 3)
+pop x3 lalu pop pada stack kosong -> undefined (tanpa error), size = 0
+Stack(batas 3) setelah push 1..5 -> [ 3, 4, 5 ] (elemen tertua dibuang)
+
+kurungSeimbang:
+  '(a+b)*[c-d]'      -> true  LULUS
+  '(a+b]'            -> false LULUS
+  '((a)'             -> false LULUS
+  ''                 -> true  LULUS
+  '{[()]}'           -> true  LULUS
+  '{[(])}'           -> false LULUS
+  ')('               -> false LULUS
+  'tanpa kurung'     -> true  LULUS
+
+balikString:
+  'halo' -> 'olah'  LULUS
+  '' -> ''  LULUS
+  'a' -> 'a'  LULUS
+  'Struktur Data' -> 'ataD rutkurtS'  LULUS
+
+adalahPalindrom:
+  'katak' -> true  LULUS
+  'Kasur ini rusak' -> true  LULUS
+  'A man, a plan, a canal: Panama' -> true  LULUS
+  'halo' -> false  LULUS
+  '' -> true  LULUS
+  'a' -> true  LULUS
+
+SEMUA UJI LAB 3 LULUS

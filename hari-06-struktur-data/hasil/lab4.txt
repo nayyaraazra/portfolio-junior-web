@@ -1,0 +1,10 @@
+=== Lab 4: Queue ===
+queue baru: isEmpty = true | dequeue() -> undefined (tanpa error)
+enqueue A001,A002,A003 -> size 3 | front A001 | isi [ 'A001', 'A002', 'A003' ]
+dequeue x3 -> urutan A001, A002, A003 (FIFO), isEmpty = true
+dequeue pada queue kosong -> undefined, size = 0
+enqueue lagi setelah kosong -> front B001 | size 1
+toArray() mengembalikan salinan; mengubahnya tidak memengaruhi queue
+clear() -> isEmpty = true
+
+SEMUA UJI LAB 4 LULUS

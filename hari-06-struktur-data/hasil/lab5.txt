@@ -1,0 +1,15 @@
+=== Lab 5: Mengukur Efisiensi (N = 100.000, 3 percobaan) ===
+
+Percobaan 1: includes=85.842 | Set.has=0.020 | shift=10701.008 | dequeue=2.740  (ms)
+Percobaan 2: includes=83.423 | Set.has=0.023 | shift=10740.177 | dequeue=2.763  (ms)
+Percobaan 3: includes=84.300 | Set.has=0.027 | shift=10688.193 | dequeue=2.672  (ms)
+
+Rata-rata:
+Operasi                       Waktu (ms)    Big-O
+Array.includes x 1000         84.522        O(n) per pencarian
+Set.has x 1000                0.024         O(1) per pencarian
+Array.shift hingga kosong     10709.793     O(n) per operasi
+Queue.dequeue hingga kosong   2.725         O(1) per operasi
+
+Rasio includes/Set.has : 3587x
+Rasio shift/dequeue    : 3930.11x

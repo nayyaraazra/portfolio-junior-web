@@ -1,0 +1,27 @@
+=== Bug Hunt Hari 6 ===
+
+[Bug 1] dequeue() pada queue kosong dipakai sebagai angka
+  Bermasalah : NaN (NaN karena 100 + undefined)
+  Perbaikan  : 100 (periksa isEmpty() sebelum memakai hasil)
+
+[Bug 2] pop() stack kosong tanpa pemeriksaan
+  Bermasalah : pop() -> undefined | dibandingkan dengan "(" -> false (tidak ada pesan/penanda)
+  Pesan      : stack kosong, tidak ada yang di-pop
+  Perbaikan  : popAman() -> null
+
+[Bug 3] peek() memakai items[items.length]
+  Bermasalah : undefined (selalu undefined)
+  Perbaikan  : C (items[items.length - 1])
+
+[Bug 4] size() Queue menghitung tail + head
+  Bermasalah : 6 (seharusnya 2; tail 4 + head 2 = 6)
+  Perbaikan  : 2 (tail - head = 4 - 2)
+
+[Bug 5] const salinan = daftar; salinan.sort()
+  Bermasalah : array asli ikut berubah -> [ 'Budi', 'Citra', 'Sari' ]
+  Perbaikan  : asli [ 'Sari', 'Budi', 'Citra' ] | terurut [ 'Budi', 'Citra', 'Sari' ]
+
+[Bug 6] find() di dalam loop (O(n^2)) vs Map/objek berindeks id (O(n))
+  Bermasalah  (find dalam loop): 1.903s
+  Perbaikan   (Map dibuat dulu): 9.826ms
+  Hasil sama : true

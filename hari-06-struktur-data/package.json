@@ -1,0 +1,17 @@
+{
+  "name": "hari-06-struktur-data",
+  "version": "1.0.0",
+  "description": "Hari 6 - Struktur Data I: Array, Objek, Stack, dan Queue (Junior Web Programmer, J.620100.004.02)",
+  "type": "module",
+  "scripts": {
+    "lab1": "node lab1.js",
+    "lab2": "node lab2.js",
+    "lab3": "node lab3.js",
+    "lab4": "node lab4.js",
+    "lab5": "node lab5.js",
+    "bug": "node bug-struktur.js",
+    "tes": "node tes-pbl.js",
+    "semua": "node lab1.js && node lab2.js && node lab3.js && node lab4.js && node tes-pbl.js && node bug-struktur.js",
+    "serve": "python3 -m http.server 8080"
+  }
+}
