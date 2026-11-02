@@ -1,0 +1,81 @@
+:root {
+  --warna-teks: #1f2937;
+  --warna-aksen: #1d4ed8;
+  --warna-bahaya: #b91c1c;
+  --warna-garis: #d1d5db;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  color: var(--warna-teks);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+main {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+section {
+  border: 1px solid var(--warna-garis);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.nomor-besar {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--warna-aksen);
+  margin: 0;
+}
+
+.tombol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+button:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--warna-aksen);
+  outline-offset: 2px;
+}
+
+.bahaya {
+  color: var(--warna-bahaya);
+  border: 1px solid var(--warna-bahaya);
+}
+
+textarea {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+#pesan {
+  min-height: 1.5rem;
+  font-weight: 600;
+}
+
+#pesan.galat {
+  color: var(--warna-bahaya);
+}

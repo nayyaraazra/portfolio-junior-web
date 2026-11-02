@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simulator Antrean dan Riwayat</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Simulator Antrean dan Riwayat</h1>
+      <p id="pesan" role="status" aria-live="polite"></p>
+    </header>
+
+    <main>
+      <section aria-labelledby="judul-antrean">
+        <h2 id="judul-antrean">Antrean Pasien</h2>
+        <p>Sedang dipanggil:</p>
+        <p id="dipanggil" class="nomor-besar">-</p>
+        <p>Menunggu: <span id="jumlah">0</span></p>
+        <div class="tombol">
+          <button id="ambil" type="button">Ambil Nomor</button>
+          <button id="panggil" type="button">Panggil Berikutnya</button>
+          <button id="reset" type="button" class="bahaya">Reset</button>
+        </div>
+        <h3>Daftar menunggu</h3>
+        <ol id="daftar"></ol>
+        <h3>Riwayat 5 panggilan terakhir</h3>
+        <ul id="riwayat-panggilan"></ul>
+      </section>
+
+      <section aria-labelledby="judul-editor">
+        <h2 id="judul-editor">Editor Catatan</h2>
+        <label for="editor">Catatan</label>
+        <textarea id="editor" rows="8"></textarea>
+        <div class="tombol">
+          <button id="undo" type="button" disabled>Undo</button>
+          <button id="redo" type="button" disabled>Redo</button>
+        </div>
+        <p id="info-riwayat"></p>
+      </section>
+    </main>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

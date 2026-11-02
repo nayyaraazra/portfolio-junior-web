@@ -1,0 +1,19 @@
+{
+  "name": "hari-07-struktur-data",
+  "version": "1.0.0",
+  "description": "Hari 7 - Struktur Data II, Algoritma, dan Clean Code",
+  "type": "module",
+  "scripts": {
+    "lab1": "node lab1.js",
+    "lab2": "node lab2.js",
+    "lab3": "node lab3.js",
+    "lint": "eslint .",
+    "lint:buruk": "eslint --no-ignore kode-buruk.js",
+    "format": "prettier --write . !kode-buruk.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.14.0",
+    "prettier": "^3.9.10"
+  }
+}
