@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio Diklat Junior Web Programmer — Nayyara Aqila">
+  <title>Portfolio — Junior Web Programmer</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%230b5ed7'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --utama: #0b5ed7;
+      --gelap: #1f2937;
+      --terang: #f9fafb;
+      --abu: #6b7280;
+      --radius: 10px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: var(--gelap);
+      background: var(--terang);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--utama), #6610f2);
+      color: #fff;
+      text-align: center;
+      padding: 3.5rem 1rem 3rem;
+    }
+    .hero h1 { font-size: clamp(1.5rem, 4vw, 2.5rem); margin-bottom: 0.5rem; }
+    .hero p { opacity: 0.9; max-width: 540px; margin: 0 auto; }
+
+    /* Container */
+    .kontainer {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      flex: 1;
+    }
+    .kontainer > h2 {
+      font-size: 1.35rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 2px solid var(--utama);
+      padding-bottom: 0.4rem;
+      display: inline-block;
+    }
+
+    /* Grid kartu */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    @media (min-width: 600px)  { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 900px)  { .grid { grid-template-columns: repeat(3, 1fr); } }
+
+    /* Kartu */
+    .kartu {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .kartu:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      text-decoration: none;
+    }
+    .kartu .hari {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--utama);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .kartu h3 { font-size: 1.05rem; line-height: 1.3; }
+    .kartu p { font-size: 0.88rem; color: var(--abu); flex: 1; }
+    .kartu .label {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: var(--utama);
+      font-weight: 600;
+      align-self: flex-start;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1.25rem 1rem;
+      color: var(--abu);
+      font-size: 0.85rem;
+      border-top: 1px solid #e5e7eb;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <h1>🍞 Portfolio Junior Web Programmer</h1>
+    <p>Kumpulan proyek dan latihan selama Diklat Junior Web Programmer 2026 — Nayyara Aqila</p>
+  </header>
+
+  <main class="kontainer">
+
+    <h2>📂 Proyek & Demo</h2>
+    <div class="grid">
+
+      <a class="kartu" href="hari-03-css/proyek-1-landing-page/">
+        <span class="hari">Hari 03 — CSS</span>
+        <h3>Landing Page Toko Roti</h3>
+        <p>Landing page responsif UMKM dengan Flexbox, Grid, variabel CSS, dan form pemesanan.</p>
+        <span class="label">🌐 Live Demo</span>
+      </a>
+
+      <a class="kartu" href="hari-05-fungsi/proyek-2-kalkulator/kalkulator/">
+        <span class="hari">Hari 05 — Fungsi</span>
+        <h3>Kalkulator</h3>
+        <p>Kalkulator interaktif menggunakan fungsi JavaScript.</p>
+        <span class="label">🌐 Live Demo</span>
+      </a>
+
+      <a class="kartu" href="hari-05-fungsi/proyek-2-kalkulator/validator/">
+        <span class="hari">Hari 05 — Fungsi</span>
+        <h3>Validator Form</h3>
+        <p>Validasi input formulir dengan JavaScript.</p>
+        <span class="label">🌐 Live Demo</span>
+      </a>
+
+      <a class="kartu" href="hari-07-struktur-data/proyek-3-antrian/">
+        <span class="hari">Hari 07 — Struktur Data</span>
+        <h3>Sistem Antrian</h3>
+        <p>Aplikasi antrian menggunakan struktur data queue.</p>
+        <span class="label">🌐 Live Demo</span>
+      </a>
+
+    </div>
+
+    <h2>📖 Latihan Harian</h2>
+    <div class="grid">
+
+      <a class="kartu" href="hari-01-instalasi/">
+        <span class="hari">Hari 01</span>
+        <h3>Instalasi & Setup</h3>
+        <p>Persiapan tools: VS Code, Git, browser, dan terminal.</p>
+        <span class="label">Latihan</span>
+      </a>
+
+      <a class="kartu" href="hari-02-html/">
+        <span class="hari">Hari 02</span>
+        <h3>HTML Dasar</h3>
+        <p>Struktur HTML semantik, elemen, dan atribut dasar.</p>
+        <span class="label">Latihan</span>
+      </a>
+
+      <a class="kartu" href="hari-03-css/">
+        <span class="hari">Hari 03</span>
+        <h3>CSS Dasar</h3>
+        <p>Selector, properti, Flexbox, Grid, dan media query.</p>
+        <span class="label">Latihan</span>
+      </a>
+
+      <a class="kartu" href="hari-04-js/">
+        <span class="hari">Hari 04</span>
+        <h3>JavaScript Dasar</h3>
+        <p>Variabel, tipe data, operator, dan kontrol alur.</p>
+        <span class="label">Latihan</span>
+      </a>
+
+      <a class="kartu" href="hari-05-fungsi/">
+        <span class="hari">Hari 05</span>
+        <h3>Fungsi JavaScript</h3>
+        <p>Deklarasi fungsi, parameter, return, dan scope.</p>
+        <span class="label">Latihan</span>
+      </a>
+
+      <a class="kartu" href="hari-06-struktur-data/">
+        <span class="hari">Hari 06</span>
+        <h3>Struktur Data I</h3>
+        <p>Array, object, dan manipulasi data.</p>
+        <span class="label">Latihan</span>
+      </a>
+
+      <a class="kartu" href="hari-07-struktur-data/">
+        <span class="hari">Hari 07</span>
+        <h3>Struktur Data II</h3>
+        <p>Stack, queue, dan implementasi lanjutan.</p>
+        <span class="label">Latihan</span>
+      </a>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Nayyara Aqila — Diklat Junior Web Programmer</p>
+  </footer>
+
+</body>
+</html>
+
