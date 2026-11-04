@@ -1,0 +1,12 @@
+{
+    "name": "peserta/pendaftaran-pelatihan",
+    "authors": [
+        {
+            "name": "Nayyara Aqila",
+            "email": "nayyaraazra468@gmail.com"
+        }
+    ],
+    "require": {
+        "dompdf/dompdf": "^3.1"
+    }
+}
