@@ -16,7 +16,7 @@ Perintah pemeriksaan cepat:
 
 ```
 git grep -nE "var_dump|print_r|console\.log|debugger"
-git grep -n "maululus"        # ganti dengan kata sandi database Anda; hasil harus kosong
+git grep -n "(sandi)"        # kata sandi database 
 git ls-files | grep -E "config/config.php|vendor/"   # hasil harus kosong
 ```
 
