@@ -4,7 +4,7 @@
 |---|---|
 | ID modul / berkas | MOD-PND-001 / `src/pendaftar.php` |
 | Versi dan status | 1.1.1 / aktif |
-| Penulis dan tanggal | Nayyara Aqila / (isi tanggal) |
+| Penulis dan tanggal | Nayyara Aqila / (4/11/2026) |
 | Kegunaan | Akses data, validasi, dan aturan kuota untuk pendaftar pelatihan |
 | Dependensi | `config/database.php` (PDO), `src/helpers.php`, `src/validasi.php` |
 | Fungsi/kelas publik | Lihat tabel antarmuka di bawah |
@@ -42,6 +42,6 @@ try {
 
 | Versi | Tanggal | Perubahan | Penulis |
 |---|---|---|---|
-| 1.0.0 | (isi tanggal Hari 9) | CRUD pendaftar dan validasi dasar | Nayyara Aqila |
-| 1.1.0 | (isi tanggal Hari 11) | Tambah `daftarkanDenganKuota` dan `KuotaPenuhException`; `daftarKelas` memuat kuota dan jumlah terisi | Nayyara Aqila |
-| 1.1.1 | (isi tanggal Hari 12) | Tambah DocBlock dan komentar alasan; `hitungPendaftar` dan `ambilPendaftar` ditandai usang | Nayyara Aqila |
+| 1.0.0 | (Hari 9) | CRUD pendaftar dan validasi dasar | Nayyara Aqila |
+| 1.1.0 | (Hari 11) | Tambah `daftarkanDenganKuota` dan `KuotaPenuhException`; `daftarKelas` memuat kuota dan jumlah terisi | Nayyara Aqila |
+| 1.1.1 | ( Hari 12) | Tambah DocBlock dan komentar alasan; `hitungPendaftar` dan `ambilPendaftar` ditandai usang | Nayyara Aqila |

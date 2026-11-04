@@ -1,10 +1,5 @@
 # Laporan Bug - Sprint 2 (Hari 11)
 
-- Proyek: Proyek 5 - Sistem Pendaftaran Pelatihan
-- Pelapor: (isi nama)
-- Periode: (isi tanggal)
-- Metode temuan: menjalankan aplikasi dan membaca kode `proyek-5-capstone-pendaftaran`, lalu mereproduksi gejala dengan `curl`/browser sebelum diperbaiki.
-
 ## Tabel Laporan Bug
 
 | ID | Jenis | Gejala | Penyebab | Perbaikan |
@@ -26,8 +21,6 @@ Jenis: Syntax / Runtime / Logic.
 | B-03 | Tinggi | `public/logout.php:5` | 1. Login 2. Buka `/logout.php` lewat URL 3. Buka `/index.php` dengan sesi yang sama | Tidak ada error; `index.php` tetap terbuka (HTTP 200) | | `screenshots/B-03-sebelum.png`, `screenshots/B-03-sesudah.png` |
 | B-04 | Sedang | `public/daftar.php:20` | 1. Pilih kelas dengan kuota hampir penuh (atau turunkan `kuota` di tabel `kelas`) 2. Daftar sampai melewati kuota | Tidak ada pesan; data tetap tersimpan melebihi kuota | | `screenshots/B-04-sebelum.png`, `screenshots/B-04-sesudah.png` |
 | B-05 | Rendah | `templates/header.php:21-31` | 1. Login 2. Perhatikan navbar; 3. Periksa HTML di DevTools (Elements) | `<form>` sebagai anak langsung `<ul>`; tidak ada pesan error | | `screenshots/B-05-sebelum.png`, `screenshots/B-05-sesudah.png` |
-
-Tingkat keparahan: Kritis (aplikasi tak jalan/data rusak/akses tanpa izin), Tinggi, Sedang, Rendah.
 
 ## Uji Regresi Setelah Semua Perbaikan
 

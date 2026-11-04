@@ -4,7 +4,7 @@
 |---|---|
 | ID modul / berkas | MOD-AUT-001 / `src/auth.php` |
 | Versi dan status | 1.0.1 / aktif |
-| Penulis dan tanggal | Nayyara Aqila / (isi tanggal) |
+| Penulis dan tanggal | Nayyara Aqila / (4/11/2026) |
 | Kegunaan | Autentikasi admin berbasis sesi dan `password_hash` |
 | Dependensi | `config/database.php` (PDO), `src/helpers.php` (`redirect()`), tabel `admin` |
 | Fungsi publik | `cariAdmin`, `prosesLogin`, `wajibLogin`, `logout` |
@@ -25,12 +25,12 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/../src/bootstrap.php';
-wajibLogin();   // di awal setiap halaman admin
+wajibLogin();  
 ```
 
 ## Riwayat revisi
 
 | Versi | Tanggal | Perubahan | Penulis |
 |---|---|---|---|
-| 1.0.0 | (isi tanggal Hari 11) | Login admin: `cariAdmin`, `prosesLogin`, `wajibLogin`, `logout` | Nayyara Aqila |
-| 1.0.1 | (isi tanggal Hari 12) | Tambah DocBlock; perbaiki pemakaian: `wajibLogin()` dipasang di semua halaman admin dan logout hanya lewat POST + CSRF | Nayyara Aqila |
+| 1.0.0 | (Hari 11) | Login admin: `cariAdmin`, `prosesLogin`, `wajibLogin`, `logout` | Nayyara Aqila |
+| 1.0.1 | (Hari 12) | Tambah DocBlock; perbaiki pemakaian: `wajibLogin()` dipasang di semua halaman admin dan logout hanya lewat POST + CSRF | Nayyara Aqila |

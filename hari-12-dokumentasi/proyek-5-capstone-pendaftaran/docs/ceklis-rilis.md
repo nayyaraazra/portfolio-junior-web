@@ -4,38 +4,34 @@
 
 | Butir | Ya/Tidak | Catatan |
 |---|---|---|
-| Semua fungsi publik memiliki DocBlock dengan `@param`, `@return`, `@throws` | | |
-| Dokumen modul memiliki identitas, kegunaan, dan riwayat revisi terbaru | | |
-| Dokumentasi sinkron dengan kode (diuji dengan generator dan uji baca teman) | | |
-| README dapat diikuti dari nol pada mesin/basis data baru | | |
-| Tidak ada kredensial nyata, `var_dump`, atau `console.log` tersisa | | |
-| CHANGELOG.md, LICENSE, dan atribusi library lengkap | | |
-| Tag v1.0.0 sudah dibuat dan didorong ke GitHub | | |
+| Semua fungsi publik memiliki DocBlock dengan `@param`, `@return`, `@throws` | Ya | |
+| Dokumen modul memiliki identitas, kegunaan, dan riwayat revisi terbaru | Ya | |
+| Dokumentasi sinkron dengan kode (diuji dengan generator dan uji baca teman) |  | |
+| README dapat diikuti dari nol pada mesin/basis data baru | Ya | |
+| Tidak ada kredensial nyata, `var_dump`, atau `console.log` tersisa |Ya | |
+| CHANGELOG.md, LICENSE, dan atribusi library lengkap | Ya | |
+| Tag v1.0.0 sudah dibuat dan didorong ke GitHub |ya | |
 
 Perintah pemeriksaan cepat:
 
 ```
 git grep -nE "var_dump|print_r|console\.log|debugger"
-git grep -n "(sandi)"        # kata sandi database 
+git grep -n ""        # kata sandi database
 git ls-files | grep -E "config/config.php|vendor/"   # hasil harus kosong
 ```
 
 ## 2. Catatan Uji Instalasi dari Nol
 
-- Tanggal: (isi)
-- Lokasi uji: (folder baru hasil `git clone ... uji-instalasi`)
-- Database uji: (nama database baru)
-
-| Langkah README | Berhasil? | Masalah/kendala | Perbaikan pada README |
+| Langkah README | Berhasil? | Perbaikan pada README |
 |---|---|---|---|
-| 1. Salin/clone proyek | | | |
-| 2. Impor `database/skema.sql` | | | |
-| 3. Salin `config.contoh.php` menjadi `config.php`, isi kredensial | | | |
-| 4. `composer install` | | | |
-| 5. `php database/buat-admin.php admin SandiKuat123` | | | |
-| 6. Buka aplikasi di browser | | | |
-| Uji: daftar sebagai peserta, login admin, cetak PDF | | | |
-| Uji: `php tests/jalankan.php` | | | |
+| 1. Salin/clone proyek | berhasil | - |
+| 2. Impor `database/skema.sql` |berhasil| - |
+| 3. Salin `config.contoh.php` menjadi `config.php`, isi kredensial | berhasil| - |
+| 4. `composer install` |berhasil | - |
+| 5. `php database/buat-admin.php admin SandiKuat123` |berhasil | - |
+| 6. Buka aplikasi di browser |berhasil | - |
+| Uji: daftar sebagai peserta, login admin, cetak PDF | berhasil| - |
+| Uji: `php tests/jalankan.php` | Berhasil| - |
 
 ## 3. Rilis
 
